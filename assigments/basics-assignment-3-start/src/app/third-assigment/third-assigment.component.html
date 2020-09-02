@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="toggleVisibility()">Dispaly Details</button>
+<p [ngStyle]="{display: (this.paragraphVisible) ? 'block' :'none' }">
+    specail meal: baracuda    
+</p>
+<p *ngFor="let time of clickLogger"
+    [ngStyle]="{backgroundColor: getColor(time)}"
+    [ngClass]="{ whiteColor: isFifth(time) }">
+    {{time.time}}
+</p>
